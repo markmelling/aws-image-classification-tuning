@@ -13,7 +13,7 @@ The images used are different dog breeds, like the ones below.
 <img src="images/dog-breeds-sample.png" alt="dog-breeds-sample.png" width="500"/>
 
 
-The project uses PyTorch to perform the ML operations.
+The project uses the PyTorch machine learning framework.
 
 If you just want to learn more about this project with installing or running anything I suggest you just click on train_and_deploy.ipynb which is rendered in github.
 
