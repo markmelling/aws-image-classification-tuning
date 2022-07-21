@@ -25,6 +25,8 @@ If using SageMaker Studio log into AWS and go to the SageMaker Studio. There you
 
 If you choose to run the notebook locally you will need to install conda/miniconda and install the required packages. I would recommend using miniconda (https://docs.conda.io/en/latest/miniconda.html). The required packages are included in the notebook.
 
+Note: I've included src/hpo.py and src/train_model.py as hpo.py and train.py respectively in the root directory as per the checklist.  
+
 ## Dataset
 The dataset used is that of dog breeds. There are separate folders for train, validate and test. In each of these folders there are separate folders for the different dog breeds. Images organised in this structure, with the labels effectively being the folder names is supported in PyTorch by the ImageFolder (https://pytorch.org/vision/stable/generated/torchvision.datasets.ImageFolder.html) which makes handling this data structure straight-forward.
 
@@ -42,6 +44,9 @@ Hyperparamter tuning is a technique to find the best hyperparameters to train yo
 - optimizer
 
 which according to this article [Tune an Image Classification Model](https://docs.aws.amazon.com/sagemaker/latest/dg/IC-tuning.htmlhttps://docs.aws.amazon.com/sagemaker/latest/dg/IC-tuning.html) have the biggest impact for image classification jobs.
+
+
+<img src="images/hyperparameter-tuning-runs.png" alt="hyperparameter-tuning-runs.png" width="500"/>
 
 More detail is shown in the test_and_deploy.ipynb notebook, but I've taken an image from there to show the best hyperparameters.
 
