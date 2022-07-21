@@ -1,13 +1,30 @@
 # Image Classification using AWS SageMaker
 
-Use AWS Sagemaker to train a pretrained model that can perform image classification by using the Sagemaker profiling, debugger, hyperparameter tuning and other good ML engineering practices. This can be done on either the provided dog breed classication data set or one of your choice.
+AWS Sagemaker is used to to train a pretrained model that can perform image classification by using the Sagemaker profiling, debugger, hyperparameter tuning and other good ML engineering practices. 
+
+The objective of the project is not to create the best trained model, but rather demonstrate the techniques and tools that can be used to create, profile, debug, deploy and use a model using the AWS SageMaker infrastructure. In that context the specific neural network chosen is not important.
+
+I have also taken the opportunity to experiment with pytorch's new datapipes when accessing training and test data. 
+
+SageMaker's Debugger has been used to instrument training so that any issues can be more easily identified and corrected.
+
+The images used are different dog breeds, like the ones below.
+
+dog-breeds-sample.png
+
+The project uses PyTorch to perform the ML operations.
 
 ## Project Set Up and Installation
-Enter AWS through the gateway in the course and open SageMaker Studio. 
-Download the starter files.
-Download/Make the dataset available. 
+You can either use this project in conjunction wuth SageMaker Studio or run the notebook locally just utilising AWS infrastructure as required.
+
+If using SageMaker Studio log into AWS and go to the SageMaker Studio. There you can clone this repository and run the train_and_deploy.ipynb notebook.
+
+If you choose to run the notebook locally you will need to install conda/miniconda and install the required packages. I would recommend using miniconda (https://docs.conda.io/en/latest/miniconda.html). The required packages are included in the notebook.
+
 
 ## Dataset
+The dataset used is that of dog breeds. There are separate folders for train, validate and test. In each of these folders there are separate folders for the different dog breeds. Images organised in this structure, with the labels effectively being the folder names is supported in PyTorch by the ImageFolder (https://pytorch.org/vision/stable/generated/torchvision.datasets.ImageFolder.html) which makes handling this data structure straight-forward.
+
 The provided dataset is the dogbreed classification dataset which can be found in the classroom.
 The project is designed to be dataset independent so if there is a dataset that is more interesting or relevant to your work, you are welcome to use it to complete the project.
 
@@ -39,3 +56,8 @@ Remember that your README should:
 
 ## Standout Suggestions
 **TODO (Optional):** This is where you can provide information about any standout suggestions that you have attempted.
+
+Used PyTorch Datapipes in order to determine means and standard deviations of the images.
+Able to deploy updated script via model
+
+

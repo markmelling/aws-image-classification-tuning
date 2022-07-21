@@ -1,0 +1,3 @@
+Pillow
+smdebug
+smdebug-rulesconfig
